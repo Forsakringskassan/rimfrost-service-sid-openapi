@@ -1,0 +1,81 @@
+openapi: 3.0.3
+info:
+  title: API för att hämta information om skyddad identitet för individer
+  version: 1.0.0
+  description: API för att hämta information om skyddad identitet för individer
+
+tags:
+  - name: Sid
+    description: Operationer för att hämta information om skyddad identitet för individer
+
+paths:
+  /sid/status:
+    post:
+      tags: [Sid]
+      summary: Hämta status information om skyddad identitet för en eller flera individer
+      description: Hämta status information om skyddad identitet för en eller flera individer
+      operationId: getSidStatus
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SidStatusRequest"
+      responses:
+        '200':
+           description: Förfrågan genomförd OK
+           content:
+             application/json:
+               schema:
+                 $ref: '#/components/schemas/SidStatusResponse'
+        '400':
+           description: Ogiltig förfrågan
+        '500':
+           description: Internt serverfel
+
+components:
+  schemas:
+    SidStatusRequest:
+      type: object
+      title: SidStatusRequest
+      properties:
+        individer:
+          type: array
+          items:
+            $ref: '#/components/schemas/Idtyp'
+          description: Individer att kontrollera för skyddad identitet
+      required:
+        - individer
+      example:
+        individer:
+          - typId: "4c34906c-03d9-425f-9a1a-062ef6eb88c7"
+            varde: "19901010-1234"
+
+    SidStatusResponse:
+      type: object
+      title: SidStatusResponse
+      properties:
+        sid:
+          type: boolean
+          description: Indikator om en eller flera individer har skyddad identitet
+      required:
+        - sid
+      example:
+        sid: true
+
+    Idtyp:
+      type: object
+      properties:
+        typId:
+          type: string
+          description: Unikt ID som identifierar vilken typ av värde som anges
+        varde:
+          type: string
+          description: ID-värde som identifieras av typ
+      required:
+        - typId
+        - varde
+      example:
+        typId: "4c34906c-03d9-425f-9a1a-062ef6eb88c7"
+        varde: "19901010-1234"
+
