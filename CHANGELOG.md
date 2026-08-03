@@ -1,3 +1,9 @@
+## 0.0.2 (2026-08-03)
+
+### Bug Fixes
+
+-  lägger till code 503 ([419a9](https://github.com/Forsakringskassan/rimfrost-service-sid-openapi/commit/419a97607777da0) Ulf Slunga)  
+
 ## 0.0.1 (2026-07-01)
 
 ### Bug Fixes
