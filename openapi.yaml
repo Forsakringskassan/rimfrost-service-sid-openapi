@@ -32,6 +32,8 @@ paths:
            description: Ogiltig förfrågan
         '500':
            description: Internt serverfel
+        '503':
+           description: Tjänsten är tillfälligt otillgänglig
 
 components:
   schemas:
