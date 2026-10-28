@@ -1,3 +1,11 @@
+## 0.0.4 (2026-10-28)
+
+### Bug Fixes
+
+-  **deps**  update dependency org.openapitools:jackson-databind-nullable to v0.2.13 ([af617](https://github.com/Forsakringskassan/rimfrost-service-sid-openapi/commit/af61741c13335eb) renovate[bot])  
+-  **deps**  update jackson monorepo to v2.22.4 ([fb419](https://github.com/Forsakringskassan/rimfrost-service-sid-openapi/commit/fb419c6588557e1) renovate[bot])  
+-  Disable renovate version bump for gradle wrapper ([709f0](https://github.com/Forsakringskassan/rimfrost-service-sid-openapi/commit/709f099b11631a7) Lars Persson)  
+
 ## 0.0.3 (2026-10-27)
 
 ### Bug Fixes
