@@ -1,3 +1,10 @@
+## 0.0.5 (2026-10-28)
+
+### Bug Fixes
+
+-  Update settings.gradle to reference renamed openapi-spec dirs ([832e6](https://github.com/Forsakringskassan/rimfrost-service-sid-openapi/commit/832e6ae9f941b22) Ulf Slunga)  
+-  Rename api dirs to openapi-spec naming convention ([b0fdb](https://github.com/Forsakringskassan/rimfrost-service-sid-openapi/commit/b0fdbbb4ffc4e29) Ulf Slunga)  
+
 ## 0.0.4 (2026-10-28)
 
 ### Bug Fixes
