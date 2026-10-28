@@ -25,13 +25,13 @@ allprojects {
 	}
 }
 
-project("rimfrost-service-sid-api-spec",{
+project("rimfrost-service-sid-openapi-spec",{
 	fkOpenApi {
 		generatorName.set("openapi-yaml")
 	}
 })
 
-project("rimfrost-service-sid-api-jaxrs-spec",{
+project("rimfrost-service-sid-openapi-jaxrs-spec",{
 	fkOpenApi {
 		generatorName.set("jaxrs-spec")
 	}
